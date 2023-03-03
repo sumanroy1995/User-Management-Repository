@@ -13,7 +13,7 @@ import com.admin.usermanagement.bean.User;
 public class UserDao {
 	private String jdbcURL = "jdbc:mysql://localhost:3306/userdb?useSSL=false";
 	private String jdbcUsername = "root";
-	private String jdbcPassword = "rootpasswordgiven";
+	private String jdbcPassword = "root";
 
 	private static final String INSERT_USERS_SQL = "INSERT INTO users" + "  (name, email, country) VALUES "
 			+ " (?, ?, ?);";
@@ -29,7 +29,7 @@ public class UserDao {
 	protected Connection getConnection() {
 		Connection connection = null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
