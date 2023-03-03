@@ -13,7 +13,7 @@
 
 	<header>
 		<nav class="navbar navbar-expand-md navbar-dark"
-			style="background-color: blue">
+			style="background-color: black">
 			<div>
 				<a href="https://www.xadmin.net" class="navbar-brand"> User
 					Management Application </a>
@@ -21,7 +21,7 @@
 
 			<ul class="navbar-nav">
 				<li><a href="<%=request.getContextPath()%>/list"
-					class="nav-link">Users</a></li>
+					class="nav-link">Users List</a></li>
 			</ul>
 		</nav>
 	</header>
