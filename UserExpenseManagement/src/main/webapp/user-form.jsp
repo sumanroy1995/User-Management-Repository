@@ -13,9 +13,9 @@
 
 	<header>
 		<nav class="navbar navbar-expand-md navbar-dark"
-			style="background-color: blue">
+			style="background-color: black">
 			<div>
-				<a href="https://www.xadmin.net" class="navbar-brand"> User Management Application </a>
+				<a href="https://www.admin.net" class="navbar-brand"> User Management Application </a>
 			</div>
 
 			<ul class="navbar-nav">
@@ -34,15 +34,10 @@
 				<c:if test="${user == null}">
 					<form action="insert" method="post">
 				</c:if>
-
 				<caption>
 					<h2>
-						<c:if test="${user != null}">
-            			Edit User
-            		</c:if>
-						<c:if test="${user == null}">
-            			Add New User
-            		</c:if>
+						<c:if test="${user != null}">Edit User</c:if>
+						<c:if test="${user == null}">Add New User</c:if>
 					</h2>
 				</caption>
 
