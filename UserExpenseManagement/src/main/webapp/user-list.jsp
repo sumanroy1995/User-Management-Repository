@@ -15,7 +15,7 @@
 		<nav class="navbar navbar-expand-md navbar-dark"
 			style="background-color: black">
 			<div>
-				<a href="https://www.admin.net" class="navbar-brand"> User Management Application </a>
+				<a href="http://localhost:8080/UserExpenseManagement" class="navbar-brand"> User Management Application </a>
 			</div>
 
 			<ul class="navbar-nav">
@@ -33,31 +33,31 @@
 			<h3 class="text-center">List of Users</h3>
 			<hr>
 			<div class="container text-left">
-
 				<a href="<%=request.getContextPath()%>/new" class="btn btn-success">Add New User</a>
 			</div>
 			<br>
-			<table class="table table-bordered">
+			<table class="table table-bordered text-center">
 				<thead>
 					<tr>
 						<th>ID</th>
 						<th>Name</th>
-						<th>Email</th>
+						<th>Email-ID</th>
 						<th>Country</th>
-						<th>Actions</th>
+						<th>Edit Section</th>
 					</tr>
 				</thead>
 				<tbody>
 				
-					<c:forEach var="user" items="${listedUser}">
+					<c:forEach var="user" items="${listUser}">
 
 						<tr>
 							<td><c:out value="${user.id}" /></td>
 							<td><c:out value="${user.name}" /></td>
 							<td><c:out value="${user.email}" /></td>
 							<td><c:out value="${user.country}" /></td>
-							<td><a href="edit?id=<c:out value='${user.id}' />">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; 
-							<a href="delete?id=<c:out value='${user.id}' />">Delete</a></td>
+							<td><a href="edit?id=<c:out value='${user.id}' />">Edit</a>
+								&nbsp;&nbsp;&nbsp;&nbsp; <a
+								href="delete?id=<c:out value='${user.id}' />">Delete</a></td>
 						</tr>
 					</c:forEach>
 		
